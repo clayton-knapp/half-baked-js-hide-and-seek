@@ -43,17 +43,17 @@ function handleGuess(userGuess, correctSpot) {
     // const correctContainer = correctSpot + "-container";
     // console.log(correctContainer);
 
-    const correctContainerEl = document.getElementById(correctSpot + "-container");
+    const correctContainerEl = document.getElementById(correctSpot + '-container');
     console.log(correctContainerEl);
 
     
     // then add the face class to that element so that the face shows up
-    correctContainerEl.classList.add("face");
+    correctContainerEl.classList.add('face');
 
     // then if the user guess is correct, increment the correct guesses
     if (userGuess === correctSpot){
         correctGuesses++;
-    };
+    }
 
     // update the DOM to show this change to the user (including the losses, not tracked directly in state)
     totalEl.textContent = totalGuesses;
@@ -63,9 +63,9 @@ function handleGuess(userGuess, correctSpot) {
 
 function resetStyles() {
     // should remove the face class from all containers
-    shedContainer.classList.remove("face");
-    treeContainer.classList.remove("face");
-    boulderContainer.classList.remove("face");
+    shedContainer.classList.remove('face');
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
     
 }
 
@@ -77,7 +77,7 @@ treeButton.addEventListener('click', () => {
     //calls the getRandomItem function, passes in hidingPlaces array which has list of 3 strings. The function picks a random index of 0, 1 or 2. then returns the returns the index of the array with the randomly generated index. so it should return randomly either tree boulder or shed
 
     // then use that correct spot to 'handle the guess' using the handleGuess function
-    handleGuess("tree", generatedSpot);
+    handleGuess('tree', generatedSpot);
 });
 
 boulderButton.addEventListener('click', () => {
@@ -85,7 +85,7 @@ boulderButton.addEventListener('click', () => {
     const generatedSpot = getRandomItem(hidingPlaces);
 
     // then use that correct spot to 'handle the guess' using the handleGuess function
-    handleGuess("boulder", generatedSpot);
+    handleGuess('boulder', generatedSpot);
 });
 
 shedButton.addEventListener('click', () => {
@@ -93,7 +93,7 @@ shedButton.addEventListener('click', () => {
     const generatedSpot = getRandomItem(hidingPlaces);
 
     // then use that correct spot to 'handle the guess' using the handleGuess function
-    handleGuess("shed", generatedSpot);
+    handleGuess('shed', generatedSpot);
 });
 
 
